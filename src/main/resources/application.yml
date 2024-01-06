@@ -1,6 +1,6 @@
 spring:
   datasource:
     url: jdbc:h2:mem:mydb
-    username: root
-    password: root
+    username: pass_local_user
+    password: passlocal123
     driver-class-name: org.h2.Driver
