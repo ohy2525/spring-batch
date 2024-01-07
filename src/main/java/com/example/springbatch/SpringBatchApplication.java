@@ -26,7 +26,8 @@ public class SpringBatchApplication {
 	@Bean
 	public Step passStep(JobRepository jobRepository, Tasklet testTasklet, PlatformTransactionManager platformTransactionManager){
 		return new StepBuilder("passStep", jobRepository)
-				.tasklet(testTasklet, platformTransactionManager).build();
+				.tasklet(testTasklet, platformTransactionManager)
+				.build();
 	}
 
 	@Bean
