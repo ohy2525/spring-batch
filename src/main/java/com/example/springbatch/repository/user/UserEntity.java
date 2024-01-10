@@ -13,7 +13,7 @@ import lombok.ToString;
 @Setter
 @ToString
 @Entity
-public class User extends BaseEntity {
+public class UserEntity extends BaseEntity {
 
     @Id
     private String userId;

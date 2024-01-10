@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 @Setter
 @ToString
 @Entity
-public class Pass extends BaseEntity {
+public class PassEntity extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

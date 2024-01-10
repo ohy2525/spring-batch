@@ -13,7 +13,7 @@ import lombok.ToString;
 @Setter
 @ToString
 @Entity
-public class Package extends BaseEntity {
+public class PackageEntity extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
