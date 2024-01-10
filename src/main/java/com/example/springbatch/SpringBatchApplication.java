@@ -16,11 +16,10 @@ import org.springframework.transaction.PlatformTransactionManager;
 public class SpringBatchApplication {
 
 	@Bean
-	public Tasklet testTasklet(){
-		return ((contribution, chunkContext) -> {
-			System.out.println("Execute passStep");;
-			return RepeatStatus.FINISHED;
-		});
+	public Job passJob(JobRepository jobRepository, Step passStep) {
+		return new JobBuilder("passJob", jobRepository)
+				.start(passStep)
+				.build();
 	}
 
 	@Bean
@@ -31,10 +30,11 @@ public class SpringBatchApplication {
 	}
 
 	@Bean
-	public Job passJob(JobRepository jobRepository, Step passStep) {
-		return new JobBuilder("passJob", jobRepository)
-				.start(passStep)
-				.build();
+	public Tasklet testTasklet(){
+		return ((contribution, chunkContext) -> {
+			System.out.println("Execute passStep");;
+			return RepeatStatus.FINISHED;
+		});
 	}
 
 	public static void main(String[] args) {
