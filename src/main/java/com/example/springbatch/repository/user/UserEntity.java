@@ -1,10 +1,7 @@
 package com.example.springbatch.repository.user;
 
 import com.example.springbatch.repository.BaseEntity;
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -13,6 +10,7 @@ import lombok.ToString;
 @Setter
 @ToString
 @Entity
+@Table(name = "user")
 public class UserEntity extends BaseEntity {
 
     @Id

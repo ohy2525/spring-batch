@@ -1,10 +1,7 @@
 package com.example.springbatch.repository.packaze;
 
 import com.example.springbatch.repository.BaseEntity;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -13,6 +10,7 @@ import lombok.ToString;
 @Setter
 @ToString
 @Entity
+@Table(name = "package")
 public class PackageEntity extends BaseEntity {
 
     @Id

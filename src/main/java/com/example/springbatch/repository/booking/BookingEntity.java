@@ -12,6 +12,7 @@ import java.time.LocalDateTime;
 @Setter
 @ToString
 @Entity
+@Table(name = "booking")
 public class BookingEntity extends BaseEntity {
 
     @Id
