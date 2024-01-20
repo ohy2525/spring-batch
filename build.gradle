@@ -39,6 +39,9 @@ dependencies {
 	implementation 'org.mapstruct:mapstruct:1.5.5.Final'
 	annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.5.Final'
 
+	// hibernate-types
+	implementation 'com.vladmihalcea:hibernate-types-60'
+
 	// https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
 	testImplementation 'org.apache.commons:commons-lang3:3.12.0'
 }
