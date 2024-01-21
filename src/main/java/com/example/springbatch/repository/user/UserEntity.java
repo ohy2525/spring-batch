@@ -28,7 +28,6 @@ public class UserEntity extends BaseEntity {
 
     private String phone;
 
-    @Column(columnDefinition = "json")
     @JdbcTypeCode(SqlTypes.JSON)
     private Map<String, Object> meta;
 
